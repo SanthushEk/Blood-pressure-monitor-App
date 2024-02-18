@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the getBloodPressureCategoryForAge function from the age_comparison library, for the Dart programming language.">
+  <title>getBloodPressureCategoryForAge function - age_comparison library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">demo2</a></li>
+    <li><a href="../Screens_age_comparison/Screens_age_comparison-library.html">Screens\age_comparison.dart</a></li>
+    <li class="self-crumb">getBloodPressureCategoryForAge function</li>
+  </ol>
+  <div class="self-name">getBloodPressureCategoryForAge</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="Screens_age_comparison&#47;Screens_age_comparison-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">getBloodPressureCategoryForAge</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="../Screens_age_comparison/BloodPressureAgeCategory-class.html">BloodPressureAgeCategory</a></span>
+<span class="name ">getBloodPressureCategoryForAge</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="getBloodPressureCategoryForAge-param-age"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">age</span></span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Retrieves the blood pressure category based on the provided age.</p>
+<p>Determines the appropriate blood pressure category based on the provided age:</p>
+<ul>
+<li>Checks the age against predefined age ranges.</li>
+<li>Returns the corresponding BloodPressureAgeCategory.</li>
+<li>If the age does not fall into any predefined range, it returns a default category indicating an unknown age range with all blood pressure values set to 0.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">BloodPressureAgeCategory getBloodPressureCategoryForAge(int age) {
+  if (age &gt;= 1 &amp;&amp; age &lt;= 5) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 1-5 Years&quot;,
+      minSystolic: 80,
+      minDiastolic: 55,
+      normalSystolic: 95,
+      normalDiastolic: 65,
+      maxSystolic: 110,
+      maxDiastolic: 81,
+    );
+  } else if (age &gt;= 6 &amp;&amp; age &lt;= 13) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 6-13 Years&quot;,
+      minSystolic: 90,
+      minDiastolic: 60,
+      normalSystolic: 105,
+      normalDiastolic: 70,
+      maxSystolic: 115,
+      maxDiastolic: 80,
+    );
+  } else if (age &gt;= 14 &amp;&amp; age &lt;= 19) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 14-19 Years&quot;,
+      minSystolic: 105,
+      minDiastolic: 73,
+      normalSystolic: 117,
+      normalDiastolic: 77,
+      maxSystolic: 120,
+      maxDiastolic: 81,
+    );
+  } else if (age &gt;= 20 &amp;&amp; age &lt;= 24) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 20-24 Years&quot;,
+      minSystolic: 108,
+      minDiastolic: 75,
+      normalSystolic: 120,
+      normalDiastolic: 79,
+      maxSystolic: 132,
+      maxDiastolic: 83,
+    );
+  } else if (age &gt;= 25 &amp;&amp; age &lt;= 29) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 25-29 Years&quot;,
+      minSystolic: 109,
+      minDiastolic: 76,
+      normalSystolic: 121,
+      normalDiastolic: 80,
+      maxSystolic: 133,
+      maxDiastolic: 84,
+    );
+  } else if (age &gt;= 30 &amp;&amp; age &lt;= 34) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 30-34 Years&quot;,
+      minSystolic: 110,
+      minDiastolic: 77,
+      normalSystolic: 122,
+      normalDiastolic: 81,
+      maxSystolic: 134,
+      maxDiastolic: 85,
+    );
+  } else if (age &gt;= 35 &amp;&amp; age &lt;= 39) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 35-39 Years&quot;,
+      minSystolic: 111,
+      minDiastolic: 78,
+      normalSystolic: 123,
+      normalDiastolic: 82,
+      maxSystolic: 135,
+      maxDiastolic: 86,
+    );
+  } else if (age &gt;= 40 &amp;&amp; age &lt;= 44) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 40-44 Years&quot;,
+      minSystolic: 112,
+      minDiastolic: 79,
+      normalSystolic: 125,
+      normalDiastolic: 83,
+      maxSystolic: 137,
+      maxDiastolic: 87,
+    );
+  } else if (age &gt;= 45 &amp;&amp; age &lt;= 49) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 45-49 Years&quot;,
+      minSystolic: 115,
+      minDiastolic: 80,
+      normalSystolic: 127,
+      normalDiastolic: 84,
+      maxSystolic: 139,
+      maxDiastolic: 88,
+    );
+  } else if (age &gt;= 50 &amp;&amp; age &lt;= 54) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 50-54 Years&quot;,
+      minSystolic: 116,
+      minDiastolic: 81,
+      normalSystolic: 129,
+      normalDiastolic: 85,
+      maxSystolic: 142,
+      maxDiastolic: 89,
+    );
+  } else if (age &gt;= 55 &amp;&amp; age &lt;= 59) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 55-59 Years&quot;,
+      minSystolic: 118,
+      minDiastolic: 82,
+      normalSystolic: 131,
+      normalDiastolic: 86,
+      maxSystolic: 144,
+      maxDiastolic: 90,
+    );
+  } else if (age &gt;= 60 &amp;&amp; age &lt;= 64) {
+    return BloodPressureAgeCategory(
+      name: &quot;Age 60-64 Years&quot;,
+      minSystolic: 121,
+      minDiastolic: 83,
+      normalSystolic: 137,
+      normalDiastolic: 87,
+      maxSystolic: 147,
+      maxDiastolic: 91,
+    );
+  } else {
+    return BloodPressureAgeCategory(
+      name: &quot;Unknown Age Range&quot;,
+      minSystolic: 0,
+      minDiastolic: 0,
+      normalSystolic: 0,
+      normalDiastolic: 0,
+      maxSystolic: 0,
+      maxDiastolic: 0,
+    );
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">demo2</a></li>
+    <li><a href="../Screens_age_comparison/Screens_age_comparison-library.html">age_comparison</a></li>
+    <li class="self-crumb">getBloodPressureCategoryForAge function</li>
+</ol>
+
+
+    <h5>age_comparison library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    demo2
+      0.1.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
