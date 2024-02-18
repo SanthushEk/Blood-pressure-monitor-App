@@ -1,3 +1,6 @@
-# demo2
+# CCS3351 Mobile Application Development
 
-A new Flutter project.
+Final Project
+
+E.M.A.S.B Ekanayake
+21UG0806
